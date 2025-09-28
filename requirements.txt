@@ -1,0 +1,12 @@
+Flask
+scikit-learn
+nltk
+pandas
+numpy
+joblib
+PyPDF2
+huggingface_hub
+faker
+matplotlib
+seaborn
+re

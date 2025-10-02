@@ -11,7 +11,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf'}
 MODEL_PATH = 'email_classifier_model.pkl'  # Caminho para o modelo de classificação salvo
-TOKEN = 'sua_token_api_hugging_faces'  # Substitua pelo seu token Hugging Face <<<--------------------CONFIGURE AQUI-------------------
+TOKEN = 'Seu-Hugging-Face-API-token'  # Substitua pelo seu token Hugging Face <<<--------------------CONFIGURE AQUI-------------------
 MODEL_IA = 'deepseek-ai/DeepSeek-V3-0324'  # Modelo de geração de texto, pode ser ajustado
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -129,7 +129,7 @@ def classify_email_route():
         return jsonify({
             'category': category,
             'response': response,
-            'original_text': email_text[:200] + "..." if len(email_text) > 200 else email_text
+            'original_text': email_text
         })
     
     except Exception as e:
